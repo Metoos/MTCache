@@ -31,10 +31,11 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'MTCache/Classes/**/*'
+  s.vendored_frameworks = ['MTCache/Classes/MTCache.framework']
   s.static_framework = true
   s.dependency 'YYModel', '~> 1.0.4'
   s.dependency 'YYCache', '~> 1.0.4'
-
+  
   # s.resource_bundles = {
   #   'MTCache' => ['MTCache/Assets/*.png']
   # }

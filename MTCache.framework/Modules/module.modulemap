@@ -1,6 +1,0 @@
-framework module MTCache {
-  umbrella header "MTCache.h"
-
-  export *
-  module * { export * }
-}

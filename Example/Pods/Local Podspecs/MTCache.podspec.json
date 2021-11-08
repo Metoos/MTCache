@@ -18,7 +18,7 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "MTCache/Classes/**/*",
+  "vendored_frameworks": "MTCache/**/*.{framework}",
   "static_framework": true,
   "dependencies": {
     "YYModel": [

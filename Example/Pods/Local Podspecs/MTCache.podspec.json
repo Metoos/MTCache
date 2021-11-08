@@ -1,0 +1,31 @@
+{
+  "name": "MTCache",
+  "version": "1.0.0",
+  "summary": "A short description of MTCache.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Metoos/MTCache",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Metoos": "zjqnzb92@dingtalk.com"
+  },
+  "source": {
+    "git": "https://github.com/Metoos/MTCache.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "MTCache/Classes/**/*",
+  "static_framework": true,
+  "dependencies": {
+    "YYModel": [
+      "~> 1.0.4"
+    ],
+    "YYCache": [
+      "~> 1.0.4"
+    ]
+  }
+}

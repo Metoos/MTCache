@@ -30,25 +30,35 @@ static NSString *const arg_copy    = @"copy";   //BOOL类型 是否深拷贝 储
 添加按功能逻辑模块添加对应的MTCache类目
 .h中的代码
 ```
-#import "MTCache.h"
-@class MTLoginModel;
-NS_ASSUME_NONNULL_BEGIN
-@interface MTCache (Data)
+#import "MTCache.h"  
+
+@class MTLoginModel;  
+
+NS_ASSUME_NONNULL_BEGIN  
+
+@interface MTCache (Data)  
+
 /// 保存登录ID
-MTCACHE_PROPERTY(NSString *, userId)
+MTCACHE_PROPERTY(NSString *, userId)  
+
 /// 保存socket服务器地址
-MTCACHE_PROPERTY(NSString *, socketHost)
+MTCACHE_PROPERTY(NSString *, socketHost)  
+
 /// 保存当前登录用户的信息
-MTCACHE_PROPERTY(MTLoginModel *, userInfo)
+MTCACHE_PROPERTY(MTLoginModel *, userInfo) 
 
 /// 保持socket连接的心跳时间单位s
-MTCACHE_PROPERTY(int, heartbeatTime);
+MTCACHE_PROPERTY(int, heartbeatTime);  
+
 /// 文件传到的最大字节数
-MTCACHE_PROPERTY(long,byteCount);
+MTCACHE_PROPERTY(long,byteCount);  
+
 /// 当前服务器时间
-MTCACHE_PROPERTY(double,serviceTime);
+MTCACHE_PROPERTY(double,serviceTime);  
+
 /// socket是否已连接
-MTCACHE_PROPERTY(BOOL,isSocketDidConnect);
+MTCACHE_PROPERTY(BOOL,isSocketDidConnect);  
+
 ```
 .m中的代码
 ```
@@ -59,16 +69,19 @@ MTCACHE_PROPERTY(BOOL,isSocketDidConnect);
 
 #import "MTCache+Data.h"
 
-@implementation MTCache (Data)
+@implementation MTCache (Data)  
+
 ///dm表示该数据需要同时写入内存和磁盘中保存。
 MTCACHE_OBJ_IMP(NSString *,userId, @"dm://userID")
 
-MTCACHE_OBJ_IMP(NSString *,socketHost, @"dm://socketHost")
+MTCACHE_OBJ_IMP(NSString *,socketHost, @"dm://socketHost")  
+
 ///例子2 储存ObjC类模型
 ///多个参数时使用&连接
 ///user=1 表示该数据为登录用户私有，其他登录用户读取不到
 ///copy=1 表示该数据保存到当前内存缓存中时需要先进行深拷贝操作
-MTCACHE_OBJ_IMP(MTLoginModel *,userInfo, @"dm://userInfo?class=MTLoginModel&user=1&copy=1")
+MTCACHE_OBJ_IMP(MTLoginModel *,userInfo, @"dm://userInfo?class=MTLoginModel&user=1&copy=1")  
+
 ///例子3 储存基本数据类型
 ///基本数据类型储存时可设置默认值
 MTCACHE_NUMBER_IMP(int, heartbeatTime, @"m://heartbeatTime?default=120");
@@ -153,4 +166,3 @@ MTLoginModel类具体可在demo项目中查看
     });
 }
 ```
-@end

@@ -27,7 +27,7 @@ static NSString *const arg_copy    = @"copy";   //BOOL类型 是否深拷贝 储
 
 
 ## 使用demo
-添加按功能逻辑模块添加对应的MTCache类目
+按功能逻辑模块添加对应的MTCache类目
 .h中的代码
 ```
 #import "MTCache.h"  

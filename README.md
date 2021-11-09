@@ -7,15 +7,24 @@ pod 'MTCache', '~>1.0.0'
 ```
 ## 使用说明
 
-/// scheme
-static NSString *const diskScheme          = @"d";  //磁盘Scheme @"d://"
-static NSString *const memoryScheme        = @"m";  //内存Scheme @"m://"
-static NSString *const diskAndMemoryScheme = @"dm"; //磁盘和内存Scheme @"dm://"
-/// arguments
-static NSString *const arg_user    = @"user";   //BOOL类型 数据是否为当前登录用户私有（跟随用户存储），默认0
-static NSString *const arg_class   = @"class";  //id类型 存储模型数据时的模型类
-static NSString *const arg_default = @"default";//id类型 跟随存储的数据类型 给存储类型设置默认值
-static NSString *const arg_copy    = @"copy";   //BOOL类型 是否深拷贝 储存到内存时有效 默认0
+/// scheme  
+
+static NSString *const diskScheme          = @"d";  //磁盘Scheme @"d://"  
+
+static NSString *const memoryScheme        = @"m";  //内存Scheme @"m://"  
+
+static NSString *const diskAndMemoryScheme = @"dm"; //磁盘和内存Scheme @"dm://"  
+
+/// arguments  
+
+static NSString *const arg_user    = @"user";   //BOOL类型 数据是否为当前登录用户私有（跟随用户存储），默认0  
+
+static NSString *const arg_class   = @"class";  //id类型 存储模型数据时的模型类  
+
+static NSString *const arg_default = @"default";//id类型 跟随存储的数据类型 给存储类型设置默认值  
+
+static NSString *const arg_copy    = @"copy";   //BOOL类型 是否深拷贝 储存到内存时有效 默认0  
+
 
 ## 使用demo
 添加按功能逻辑模块添加对应的MTCache类目

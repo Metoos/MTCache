@@ -59,6 +59,7 @@ MTCACHE_PROPERTY(double,serviceTime);
 /// socket是否已连接
 MTCACHE_PROPERTY(BOOL,isSocketDidConnect);  
 
+@end
 ```
 .m中的代码
 ```
